@@ -1,0 +1,7 @@
+- name: Force reboot (because is necessary) unimplement
+  fail: "unimplement, please ask on github"
+  when: macklus.so.reboot == 'only_if_necessary'
+
+- name: Force reboot (always)
+  reboot:
+  when: macklus.so.reboot == 'always'

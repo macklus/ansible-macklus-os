@@ -1,0 +1,7 @@
+---
+# repository/defaults/main.yml
+macklus:
+  so:
+    repository:
+      install: true
+      country: 'fr'

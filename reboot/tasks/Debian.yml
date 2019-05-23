@@ -1,0 +1,13 @@
+- name: Check that the /var/run/reboot-required exists
+  stat:
+    path: /var/run/reboot-required
+  register: _var_run_reboot_required
+  when: macklus.so.reboot == 'only_if_necessary'
+
+- name: Force reboot (because is necessary)
+  reboot:
+  when: _var_run_reboot_required.stat.exists == True and macklus.so.reboot == 'only_if_necessary'
+
+- name: Force reboot (always)
+  reboot:
+  when: macklus.so.reboot == 'always'

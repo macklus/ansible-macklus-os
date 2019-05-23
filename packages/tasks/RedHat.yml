@@ -1,0 +1,18 @@
+- name: Calculate latest packages
+  set_fact:
+    latest_packages: "{{ macklus.so.packages.latest.all + macklus.so.packages.latest.redhat }}"
+
+- name: Install required packages
+  yum:
+    name: "{{ latest_packages }}"
+    state: latest
+    update_cache: yes
+
+- name: Calculate absent packages
+  set_fact:
+    absent_packages: "{{ macklus.so.packages.absent.all + macklus.so.packages.absent.redhat }}"
+
+- name: Remove required packages
+  yum:
+    name: "{{ absent_packages }}"
+    state: absent

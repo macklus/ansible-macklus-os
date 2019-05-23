@@ -1,0 +1,13 @@
+---
+# packages/defaults/main.yml
+macklus:
+  so:
+    packages:
+      latest:
+        all: []
+        debian: []
+        redhat: []
+      absent:
+        all: []
+        debian: []
+        redhat: []

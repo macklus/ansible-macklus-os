@@ -1,0 +1,12 @@
+- name: "{{ ansible_distribution }} base repository"
+  apt_repository:
+    repo: "{{ item }}"
+    state: present
+  with_items:
+    - deb http://{{ macklus.so.repository.country }}.archive.ubuntu.com/ubuntu/ {{ so.release }} main restricted universe multiverse 
+    - deb-src http://{{ macklus.so.repository.country }}.archive.ubuntu.com/ubuntu/ {{ so.release }} main restricted universe multiverse 
+    - deb http://{{ macklus.so.repository.country }}.archive.ubuntu.com/ubuntu/ {{ so.release }}-security main restricted universe multiverse 
+    - deb http://{{ macklus.so.repository.country }}.archive.ubuntu.com/ubuntu/ {{ so.release }}-updates main restricted universe multiverse 
+    - deb-src http://{{ macklus.so.repository.country }}.archive.ubuntu.com/ubuntu/ {{ so.release }}-security main restricted universe multiverse 
+    - deb-src http://{{ macklus.so.repository.country }}.archive.ubuntu.com/ubuntu/ {{ so.release }}-updates main restricted universe multiverse 
+  when: macklus.so.repository.install == true
