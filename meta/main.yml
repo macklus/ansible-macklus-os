@@ -18,7 +18,7 @@ galaxy_info:
     versions:
     - all
 
-  galaxy_tags: [ 'macklus', 'so', 'update', 'packages', 'ubuntu', 'debian', 'ppa', 'fedora', 'centos']
+  galaxy_tags: [ 'macklus', 'os', 'update', 'packages', 'ubuntu', 'debian', 'ppa', 'fedora', 'centos']
 
 dependencies: []
   # List your role dependencies here, one per line. Be sure to remove the '[]' above,

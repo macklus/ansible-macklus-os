@@ -1,7 +1,7 @@
 ---
 # packages/defaults/main.yml
 macklus:
-  so:
+  os:
     packages:
       latest:
         all: []

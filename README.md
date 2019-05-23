@@ -1,4 +1,4 @@
-macklus.so
+macklus.os
 ==========
 
 Simple Operating System tools
@@ -7,7 +7,7 @@ Role Variables
 --------------
 
     macklus:
-      so:
+      os:
         repository:
           install: true
           country: 'fr'
@@ -23,12 +23,12 @@ Role Variables
         reboot: 'always|only_if_necessary'
 
 
-* **macklus.so.packages.latest.all:** Array of packages to install
-* **macklus.so.packages.latest.debian:** Array of packages to install (Debian family specific names)
-* **macklus.so.packages.latest.redhat:** Array of packages to install (RedHat family specific names)
-* **macklus.so.packages.absent.all:** Array of packages to remove
-* **macklus.so.packages.absent.debian:** Array of packages to remove (Debian specific names)
-* **macklus.so.packages.absent.redhat:** Array of packages to remove (RedHat specific names)
+* **macklus.os.packages.latest.all:** Array of packages to install
+* **macklus.os.packages.latest.debian:** Array of packages to install (Debian family specific names)
+* **macklus.os.packages.latest.redhat:** Array of packages to install (RedHat family specific names)
+* **macklus.os.packages.absent.all:** Array of packages to remove
+* **macklus.os.packages.absent.debian:** Array of packages to remove (Debian specific names)
+* **macklus.os.packages.absent.redhat:** Array of packages to remove (RedHat specific names)
 
 Example Playbook
 ----------------
@@ -38,10 +38,10 @@ Including an example of how to use your role (for instance, with variables passe
     - hosts: localhost
       remote_user: root
       roles:
-        - macklus.so/repository
-        - macklus.so/packages
-        - macklus.so/upgrade
-        - macklus.so/reboot
+        - macklus.os/repository
+        - macklus.os/packages
+        - macklus.os/upgrade
+        - macklus.os/reboot
 
 License
 -------
