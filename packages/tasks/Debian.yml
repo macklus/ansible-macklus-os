@@ -1,6 +1,6 @@
 - name: Calculate latest packages
   set_fact:
-    latest_packages: "{{ macklus.so.packages.latest.all + macklus.so.packages.latest.debian }}"
+    latest_packages: "{{ macklus.os.packages.latest.all + macklus.os.packages.latest.debian }}"
 
 - name: Install required packages
   apt:
@@ -10,7 +10,7 @@
 
 - name: Calculate absent packages
   set_fact:
-    absent_packages: "{{ macklus.so.packages.absent.all + macklus.so.packages.absent.debian }}"
+    absent_packages: "{{ macklus.os.packages.absent.all + macklus.os.packages.absent.debian }}"
 
 - name: Remove required packages
   apt:

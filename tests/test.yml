@@ -1,8 +1,7 @@
 ---
 - hosts: localhost
-  remote_user: root
   roles:
-    - macklus.so/repository
-    - macklus.so/packages
-    - macklus.so/upgrade
-    - macklus.so/reboot
+    - macklus.os/repository
+    - macklus.os/packages
+    - macklus.os/upgrade
+    - macklus.os/reboot

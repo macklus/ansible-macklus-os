@@ -1,5 +1,5 @@
 ---
 # reboot/defaults/main.yml
 macklus:
-  so:
+  os:
     reboot: 'only_if_necessary'
