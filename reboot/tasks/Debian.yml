@@ -6,7 +6,7 @@
 
 - name: Force reboot (because is necessary)
   reboot:
-  when: _var_run_reboot_required.stat.exists == True and macklus.os.reboot == 'only_if_necessary'
+  when: macklus.os.reboot == 'only_if_necessary' and _var_run_reboot_required.stat.exists
 
 - name: Force reboot (always)
   reboot:
