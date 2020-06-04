@@ -1,0 +1,13 @@
+---
+# locales/tasks/Debian.yml
+- name: Ensure desired locales are active
+  lineinfile:
+    path: /etc/locale.gen
+    regexp: "^# {{ item }}"
+    line: "{{ item }}"
+  with_items: "{{ macklus.os.locales }}"
+  register: _etc_locale_gen_
+
+- name: Generate new locales
+  shell: locale-gen
+  when: _etc_locale_gen_.changed

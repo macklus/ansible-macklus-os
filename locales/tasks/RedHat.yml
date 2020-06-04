@@ -1,0 +1,4 @@
+---
+# locales/tasks/RedHat.yml
+- fail:
+    msg: "unimplement, please ask on github"

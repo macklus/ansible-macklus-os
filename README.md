@@ -21,6 +21,7 @@ Role Variables
             debian: []
             redhat: []
         reboot: 'always|only_if_necessary'
+        locales: []
 
 
 * **macklus.os.packages.latest.all:** Array of packages to install
@@ -29,6 +30,7 @@ Role Variables
 * **macklus.os.packages.absent.all:** Array of packages to remove
 * **macklus.os.packages.absent.debian:** Array of packages to remove (Debian specific names)
 * **macklus.os.packages.absent.redhat:** Array of packages to remove (RedHat specific names)
+* **macklus.os.locales:** Array of locales to install
 
 Example Playbook
 ----------------
@@ -41,6 +43,7 @@ Including an example of how to use your role (for instance, with variables passe
         - macklus.os/repository
         - macklus.os/packages
         - macklus.os/upgrade
+        - macklus.os/locales
         - macklus.os/reboot
 
 License
