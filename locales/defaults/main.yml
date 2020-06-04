@@ -1,0 +1,5 @@
+---
+# locales/defaults/main.yml
+macklus:
+  os:
+    locales: []
